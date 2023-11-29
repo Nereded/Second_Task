@@ -12,3 +12,10 @@ class MyWindow(QMainWindow):
         self.pushButton.clicked.connect(self.add_random_circle)
         self.scene = QGraphicsScene()
         self.graphicsView.setScene(self.scene)
+
+    def add_random_circle(self):
+        diameter = random.randint(10, 100)
+        circle = QGraphicsEllipseItem(0, 0, diameter, diameter)
+        color = QColor(255, 255, 0)
+        circle.setBrush(color)
+        self.scene.addItem(circle)
