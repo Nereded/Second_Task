@@ -19,3 +19,10 @@ class MyWindow(QMainWindow):
         color = QColor(255, 255, 0)
         circle.setBrush(color)
         self.scene.addItem(circle)
+
+
+if __name__ == '__main__':
+    app = QApplication(sys.argv)
+    window = MyWindow()
+    window.show()
+    sys.exit(app.exec_())
